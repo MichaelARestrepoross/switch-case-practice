@@ -34,4 +34,6 @@ function getTransportMode(distance) {
 }
 
 
+console.log(getTransportMode(process.argv[2]));
+
 module.exports = { getTransportMode };
