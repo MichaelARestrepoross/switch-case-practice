@@ -18,6 +18,20 @@ For distances greater than 50 miles, taking a plane or train is recommended.
  * @returns {string} - The recommended mode of transport.
  */
 
-function getTransportMode(distance) {}
+function getTransportMode(distance) {
+    switch (true) {
+        case distance > 0 && distance <= 0.5:
+            return "Walking";
+        case distance > 0.5 && distance <= 5:
+            return "Bicycle";
+        case distance > 5 && distance <= 50:
+            return "Car";
+        case distance > 50:
+            return "Plane or Train";
+        default:
+            return "Distance cannot be negative.";
+    }
+}
+
 
 module.exports = { getTransportMode };
